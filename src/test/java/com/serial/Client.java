@@ -1,5 +1,6 @@
 package com.serial;
 
+import com.utils.GzipUtils;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -7,6 +8,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+
+import java.io.File;
+import java.io.FileInputStream;
 
 /**
  * @author chenbin
@@ -40,6 +44,13 @@ public class Client {
             req.setName("pro" + i);
             req.setRequestMessge("数据信息" + i);
 
+            String readPath = System.getProperty("user.dir") + File.separatorChar + "sources" + File.separatorChar + "001.jpg";
+            File file = new File(readPath);
+            FileInputStream in = new FileInputStream(file);
+            byte[] data = new byte[in.available()];
+            in.read(data);
+            in.close();
+            req.setAttachment(GzipUtils.gzip(data));
             channelFuture.channel().writeAndFlush(req);
         }
 
