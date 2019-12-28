@@ -1,7 +1,7 @@
 package com.readexcel;
 
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+/*import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -13,19 +13,19 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CountDownLatch;*/
 
 /**
  * 多个线程读取Excel
  */
 public class ReadExcelFile {
 
-    private volatile List<String> list = new ArrayList<String>();
-    /**
+    /*private volatile List<String> list = new ArrayList<String>();
+    *//**
      * 解析excel
      * @param path
      * @return
-     */
+     *//*
     public synchronized List<String> readExcel(String path) {
 
         String fileType = path.substring(path.lastIndexOf(".") + 1);
@@ -123,5 +123,5 @@ public class ReadExcelFile {
         long endTime = System.currentTimeMillis();
         System.out.println("结果为：" + list.size());
         System.out.println("解析excel结束...耗时：" + (endTime - beginTime) + "毫秒。");
-    }
+    }*/
 }

@@ -1,7 +1,0 @@
-com\chenb\controller\UploadExcelController.class
-com\chenb\controller\TestController.class
-com\chenb\service\impl\DepotServiceImpl.class
-com\chenb\controller\DemoApplication.class
-com\chenb\entry\Depot.class
-com\chenb\service\DepotService.class
-com\chenb\dao\DepotMapper.class
