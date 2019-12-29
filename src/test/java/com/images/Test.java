@@ -15,7 +15,7 @@ public class Test {
     private static final int BLACK = 0xFF000000;
     private static final int WHITE = 0xFFFFFFFF;
     public static void main ( String[] args ) throws Exception {
-        String text = "http://192.168.0.105:8080/bjwhjWeb";
+        String text = "http://192.168.0.105:8080/phone";
         String path = "E:/";
         int width = 900;
         int height = 900;
