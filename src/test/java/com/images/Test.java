@@ -14,6 +14,7 @@ public class Test {
     private static final int WHITE = 0xFFFFFFFF;
     public static void main ( String[] args ) throws Exception {
         String text = "http://192.168.0.105:8080/upload";
+        //String text = "http://10.2.21.162:8080/upload";
         String path = "E:/";
         int width = 1000;
         int height = 1000;
