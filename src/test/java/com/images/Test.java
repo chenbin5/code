@@ -1,10 +1,8 @@
 package com.images;
-
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.common.BitMatrix;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -15,10 +13,10 @@ public class Test {
     private static final int BLACK = 0xFF000000;
     private static final int WHITE = 0xFFFFFFFF;
     public static void main ( String[] args ) throws Exception {
-        String text = "http://192.168.0.105:8080/phone";
+        String text = "http://192.168.0.105:8080/upload";
         String path = "E:/";
-        int width = 900;
-        int height = 900;
+        int width = 1000;
+        int height = 1000;
         // 二维码图片格式
         String format = "jpg";
         // 设置编码，防止中文乱码
@@ -35,7 +33,7 @@ public class Test {
         int b_width = bitMatrix.getWidth ();
         int b_height = bitMatrix.getHeight ();
         // 建立图像缓冲器
-        BufferedImage image = new BufferedImage (b_width, b_height, BufferedImage.TYPE_3BYTE_BGR);
+        BufferedImage image = new BufferedImage(b_width, b_height, BufferedImage.TYPE_3BYTE_BGR);
         for ( int x = 0; x < b_width; x++ ) {
             for ( int y = 0; y < b_height; y++ ) {
                 image.setRGB (x, y, bitMatrix.get (x, y) ? BLACK : WHITE);
